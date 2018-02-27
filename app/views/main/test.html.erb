@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 500px;
+       }
+    </style>
+  </head>
+  
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    
+    <button id="button_gate" onclick="button_gate_click();">정문</button>
+    <button id="button_lib" onclick="button_lib_click();">중도</button>
+    
+    
+    <script>
+    var gate={lat:35.836332 , lng:128.753513};
+    var lib={lat:35.833117 ,lng:128.757981 };
+    var map;
+    var myLatlng = new google.maps.LatLng(35.833117 ,128.757981);
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        title:"Hello World!"
+    });
+    
+    function initMap() {
+        var uluru = {lat: 35.832121, lng: 128.757349};
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+
+    }
+
+
+//////////////////////
+     function button_gate_click() {
+	    map.setCenter(gate);
+    }
+     function button_lib_click() {
+	    map.setCenter(lib);
+	     // To add the marker to the map, call setMap();
+      marker.setMap(map);
+    }
+    
+   ////////// 
+   
+
+
+   
+    
+    ///////////////////////////////
+    </script>
+    
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUxguZfqU6iNNL8WF9PoxnguT8PxHdBYM&callback=initMap">
+    </script>
+    
+    
+</script>
+
+
+
+
+  </body>
+</html>
+

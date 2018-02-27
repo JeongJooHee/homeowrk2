@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+    label{
+        font-size:25px; 
+    }
+    input[type=checkbox]
+    {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+    }
+    
+    </style>
+  </head>
+    
+    <body>
+    
+
+
+<form action="/map_select" method="get">
+    <input type="checkbox" id="ch1" name="key[]" value="조용한"/>
+    <label for="ch1">조용한</label>
+    
+    <input type="checkbox" id="ch2" name="key[]" value="시끄러운"/>
+    <label for="ch2">시끄러운</label>
+    <br>
+    
+    <input type="checkbox" id="ch3" name="key[]" value="공부하기 좋은"/>
+    <label for="ch3">공부하기 좋은</label>
+    
+    <input type="checkbox" id="ch4" name="key[]" value="수다떨기 좋은"/>
+    <label for="ch4">수다떨기 좋은</label>
+    <br>
+    
+    <input type="checkbox" id="ch5" name="key[]" value="넓은 공간"/>
+    <label for="ch5">넓은 공간</label>
+    
+    <input type="checkbox" id="ch6" name="key[]" value="회의실"/>
+    <label for="ch6">회의실</label>
+    <br>
+    <br>
+    <input type="submit" onclick="checkbox()" value="지도보러가기">
+    
+</form>
+
+
+<script>
+var send_array=Array();
+function checkbox(){
+    var send_cnt=0;
+    var value=document.getElementsByName("key[]");
+    
+    for(var i=0; i<values.length(); i++){
+        if(values[i].checked){
+          send_array[send+cnt]=values[i].value;
+         sent_cnt++;
+        }
+    }
+    
+    $("#array").val(send_array);
+}
+
+
+</script>
+
+
+
+</body>
